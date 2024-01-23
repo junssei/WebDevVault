@@ -6,10 +6,23 @@
     <body>
         <h1 id="demo"> Hello World! </h1>
         <button onclick="demos();"> Click me! </button>
+        <p id="parags"></p>
 
         <script>
+            var count = 1;
             function demos(){
-                document.getElementById("demo").innerHTML = "Hello June!";
+                if(count == 1){
+                    console.log(count);
+                    document.getElementById("demo").innerHTML = "Hello June!";
+                    document.getElementById("parags").innerHTML = 
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a enim laoreet, sagittis erat vel, pretium risus. In orci diam, placerat sit amet vestibulum sit amet, mollis in turpis. Phasellus semper tellus non felis dictum, sit amet tempus mauris pellentesque. Maecenas fringilla orci id justo consequat, id congue neque venenatis. Etiam id tristique dolor. Sed tellus neque, sodales sed tincidunt sed, dignissim condimentum ex. Sed ut purus laoreet, laoreet erat eget, auctor dui. Sed tincidunt nibh ut tellus posuere, volutpat accumsan ex egestas. Vestibulum sodales lacus non pellentesque blandit. In scelerisque placerat lectus, sed molestie quam aliquam congue. Aenean at orci eu nibh elementum porta a a risus. Donec non hendrerit massa, sed iaculis ipsum. Sed aliquam venenatis odio, id maximus est porttitor in.";
+                    count = 0;
+                } else {
+                    console.log(count);
+                    document.getElementById("demo").innerHTML = "Hello World!";
+                    document.getElementById("parags").innerHTML = "";
+                    count = 1;
+                }
             }
         </script>
     </body>

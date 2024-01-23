@@ -33,7 +33,6 @@
 
             #scoreboard{
                 display: inline;
-                
             }
 
             #scoreSect{
@@ -45,15 +44,53 @@
                 float: right;
                 margin-right: 2vh;
             }
+
+            #dialBox{
+                display: none;
+                position: absolute;
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 25vh;
+                width: 100%; /* Full width */
+                height: 100%;
+                overflow: auto;
+            }
+            #dialBoxContent{
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                color: black;
+                font-size: 5vh;
+            }
+
+            #redo{
+                font-size: 18px;
+                padding: 15px 32px;
+                text-align: center;
+                background-color: rgb(255, 230, 91);
+                text-decoration: none;
+                border: none;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
         <div id="scoreboard">
             <div id="scoreSect">
-            <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
+                <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
             </div>
             <div id="mistakeSect">
                 <h1> MISTAKE </h1> <h1 id="mistakedisp"> 0 </h1>
+            </div>
+        </div>
+
+        <div id="dialBox">
+            <div id="dialBoxContent">
+                <p> YOU FAILED! </p>
+                <button id="redo" onclick="redo();"> Play Again </button>
             </div>
         </div>
 
@@ -67,12 +104,21 @@
             var mstke = 0;
             var score = 0;
             var hit = document.getElementById("target");
+            var box = document.getElementById("dialBox");
             
             function mistke(){
                 mstke++;
                 document.getElementById("mistakedisp").innerHTML = mstke;
+                if(mstke == 3){
+                    box.style.display = "block";
+                }
             }
 
+            function redo(){
+                location.reload();
+            }
+
+            //events
             target.addEventListener('click', mistke);
             document.addEventListener('click', function (event) {
                 if (event.target !== hit) {
@@ -82,17 +128,13 @@
 
             function hitTarget(){
                 score++; mstke--;
-                var topmax = 50, topmin = 0;
-                var leftmax = 168, leftmin = 0;
-                var max = 20, min = 5;
+                var  max = 20, min = 5, topmax = 50, topmin = 0, leftmax = 168, leftmin = 0;
                 document.getElementById("scoredisp").innerHTML = score;
                 
-                /*hit.style.top = Math.floor(400*Math.random());
-                hit.style.left = Math.floor(1500*Math.random());*/
+                /*hit.style.top = Math.floor(400*Math.random()); hit.style.left = Math.floor(1500*Math.random());*/
                 hit.style.top = Math.floor(Math.random() * ( topmax - topmin + 1) ) + min + 'vh'; //max = 50
                 hit.style.left = Math.floor(Math.random() * ( leftmax - leftmin + 1) ) + min + 'vh'; //max = 168
-                /*hit.style.width = Math.floor(Math.random() * 100) + 50;
-                hit.style.height = Math.floor(Math.random() * 100) + 50;*/
+                /*hit.style.width = Math.floor(Math.random() * 100) + 50; hit.style.height = Math.floor(Math.random() * 100) + 50;*/
                 hit.style.width = Math.floor(Math.random() * (max - min + 1) ) + min + 'vh'; //max = 20 min = 5
                 hit.style.height = Math.floor(Math.random() * (max - min + 1) ) + min + 'vh'; //max = 20 min = 5
             }

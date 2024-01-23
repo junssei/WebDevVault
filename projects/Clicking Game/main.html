@@ -5,10 +5,12 @@
             body{
                 font-size: 2vh;
                 font-family: monospace;
-                background-image: url(background.gif);
+                background-image: url(black-background.gif);
                 background-size: 100% auto;
                 color: antiquewhite;
                 text-align: center;
+                margin-top: 2vh;
+                cursor: crosshair;
             }
 
             #target{
@@ -19,6 +21,7 @@
                 width: 20vh;
                 height: 20vh;
                 object-fit: contain;
+                user-select: none;
             }
 
             #targetArea{
@@ -27,25 +30,58 @@
                 padding: 325px 25px 325px 25px;
                 margin: 25px 50px 75px 50px;
             }
+
+            #scoreboard{
+                display: inline;
+                
+            }
+
+            #scoreSect{
+                float: left;
+                margin-left: 2vh;
+            }
+
+            #mistakeSect{
+                float: right;
+                margin-right: 2vh;
+            }
         </style>
     </head>
     <body>
-        <div>
-        <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
+        <div id="scoreboard">
+            <div id="scoreSect">
+            <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
+            </div>
+            <div id="mistakeSect">
+                <h1> MISTAKE </h1> <h1 id="mistakedisp"> 0 </h1>
+            </div>
         </div>
 
         <div>
             <div id="targetArea">
-                <img src="target.png" id="target" onclick="hitTarget();">
+                <img src="target.png" id="target" onclick="hitTarget();" draggable="false">
             </div>
         </div>
 
         <script>
+            var mstke = 0;
             var score = 0;
             var hit = document.getElementById("target");
-        
+            
+            function mistke(){
+                mstke++;
+                document.getElementById("mistakedisp").innerHTML = mstke;
+            }
+
+            target.addEventListener('click', mistke);
+            document.addEventListener('click', function (event) {
+                if (event.target !== hit) {
+                    mistke();
+                }
+            });
+
             function hitTarget(){
-                score++;
+                score++; mstke--;
                 var topmax = 50, topmin = 0;
                 var leftmax = 168, leftmin = 0;
                 var max = 20, min = 5;

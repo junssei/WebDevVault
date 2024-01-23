@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> Aim Training </title>
+        <style>
+            body{
+                font-size: 2vh;
+                font-family: monospace;
+                background-image: url(background.gif);
+                background-size:cover;
+                color: antiquewhite;
+                text-align: center;
+            }
+
+            #target{
+                /*transition: 1s;*/
+                position:absolute;
+                left: 830px;
+                top: 350px;
+                width: 20vh;
+                height: 20vh;
+                object-fit: contain;
+            }
+
+            #targetArea{
+                position: relative;
+                /*border: 5px solid red;*/
+                padding: 325px 25px 325px 25px;
+                margin: 25px 50px 75px 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
+        </div>
+
+        <div>
+            <div id="targetArea">
+                <img src="target.png" id="target" onclick="hitTarget();">
+            </div>
+        </div>
+
+        <script>
+            var max = 20, min = 5;
+            var score = 0;
+            var hit = document.getElementById("target");
+        
+            function hitTarget(){
+                score++;
+                document.getElementById("scoredisp").innerHTML = score;
+                
+                hit.style.top = Math.floor(400*Math.random());
+                hit.style.left = Math.floor(1500*Math.random());
+                /*hit.style.width = Math.floor(Math.random() * 100) + 50;
+                hit.style.height = Math.floor(Math.random() * 100) + 50;*/
+                hit.style.width = Math.floor(Math.random() * ( max - min + 1) ) + min + 'vh';
+                hit.style.height = Math.floor(Math.random() * (max - min + 1) ) + min + 'vh';
+            }
+        </script>
+    </body>
+</html>

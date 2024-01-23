@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head> <title> Hello World! </title> </head>
+    <head>
+        <title> Hello World! </title>
+     </head>
     <body>
-        <h1> Hello World! </h1>
+        <h1 id="demo"> Hello World! </h1>
+        <button onclick="demos();"> Click me! </button>
+
+        <script>
+            function demos(){
+                document.getElementById("demo").innerHTML = "Hello June!";
+            }
+        </script>
     </body>
 </html>

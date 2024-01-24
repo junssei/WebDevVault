@@ -1,87 +1,19 @@
-<html>
+!<html>
     <head>
         <title> Aim Training </title>
-        <style>
-            body{
-                font-size: 2vh;
-                font-family: monospace;
-                background-image: url(black-background.gif);
-                background-size: 100% auto;
-                color: antiquewhite;
-                text-align: center;
-                margin-top: 2vh;
-                cursor: crosshair;
-            }
-
-            #target{
-                /*transition: 1s;*/
-                position:absolute;
-                left: 84vh; /*max = 168 */
-                top: 31vh; /*max = 50 */
-                width: 20vh;
-                height: 20vh;
-                object-fit: contain;
-                user-select: none;
-                display: block;
-            }
-
-            #targetArea{
-                position: relative;
-                /*border: 5px solid red;*/
-                padding: 325px 25px 325px 25px;
-                margin: 25px 50px 75px 50px;
-            }
-
-            #scoreboard{
-                display: inline;
-            }
-
-            #scoreSect{
-                float: left;
-                margin-left: 2vh;
-            }
-
-            #mistakeSect{
-                float: right;
-                margin-right: 2vh;
-            }
-
-            #dialBox{
-                display: none;
-                position: absolute;
-                z-index: 1; /* Sit on top */
-                padding-top: 6vh; /* Location of the box */
-                left: 0;
-                top: 25vh;
-                width: 100%; /* Full width */
-                overflow: auto;
-            }
-            #dialBoxContent{
-                background-color: #fefefe;
-                margin: auto;
-                padding: 3vh;
-                border: 1px solid #888;
-                width: 80%;
-                color: black;
-                font-size: 5vh;
-            }
-
-            #redo{
-                font-size: 3vh;
-                padding: 2vh 5vh;
-                text-align: center;
-                background-color: rgb(255, 230, 91);
-                text-decoration: none;
-                border: none;
-                cursor: pointer;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
     </head>
     <body>
+    <div id="container">
         <div id="scoreboard">
             <div id="scoreSect">
                 <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
             </div>
+           <div id="mistakeColor">
+
+            </div> 
             <div id="mistakeSect">
                 <h1> MISTAKE </h1> <h1 id="mistakedisp"> 0 </h1>
             </div>
@@ -99,46 +31,6 @@
                 <img src="target.png" id="target" onclick="hitTarget();" draggable="false">
             </div>
         </div>
-
-        <script>
-            var mstke = 0;
-            var score = 0;
-            var hit = document.getElementById("target");
-            var box = document.getElementById("dialBox");
-            
-            function mistke(){
-                mstke++;
-                document.getElementById("mistakedisp").innerHTML = mstke;
-                if(mstke == 3){
-                    box.style.display = "block";
-                    hit.style.display = "none";
-                }
-            }
-
-            function redo(){
-                location.reload();
-            }
-
-            //events
-            target.addEventListener('click', mistke);
-            document.addEventListener('click', function (event) {
-                if (event.target !== hit) {
-                    mistke();
-                }
-            });
-
-            function hitTarget(){
-                score++; mstke--;
-                var  max = 20, min = 5, topmax = 50, topmin = 0, leftmax = 168, leftmin = 0;
-                document.getElementById("scoredisp").innerHTML = score;
-                
-                /*hit.style.top = Math.floor(400*Math.random()); hit.style.left = Math.floor(1500*Math.random());*/
-                hit.style.top = Math.floor(Math.random() * ( topmax - topmin + 1) ) + min + 'vh'; //max = 50
-                hit.style.left = Math.floor(Math.random() * ( leftmax - leftmin + 1) ) + min + 'vh'; //max = 168
-                /*hit.style.width = Math.floor(Math.random() * 100) + 50; hit.style.height = Math.floor(Math.random() * 100) + 50;*/
-                hit.style.width = Math.floor(Math.random() * (max - min + 1) ) + min + 'vh'; //max = 20 min = 5
-                hit.style.height = Math.floor(Math.random() * (max - min + 1) ) + min + 'vh'; //max = 20 min = 5
-            }
-        </script>
+    </div>
     </body>
 </html>

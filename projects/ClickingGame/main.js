@@ -37,7 +37,7 @@ document.addEventListener('click', function (event) {
 
 function hitTarget() {
     score++; mstke--;
-    var max = 20, min = 5, topmax = 120, topmin = 40, leftmax = 95, leftmin = 5;
+    var max = 20, min = 5, topmax = 100, topmin = 40, leftmax = 95, leftmin = 5;
     document.getElementById("scoredisp").innerHTML = score;
     /*left: 84vh; /*max = 168 normal = 84, min: 5% max: 95%*/
     /*top: 31vh; /*max = 50 normal = 31, min: 40% max: 120%*/

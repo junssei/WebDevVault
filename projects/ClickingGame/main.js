@@ -49,3 +49,7 @@ function hitTarget() {
     hit.style.width = Math.floor(Math.random() * (max - min + 1)) + min + 'vh'; //max = 20 min = 5
     hit.style.height = Math.floor(Math.random() * (max - min + 1)) + min + 'vh'; //max = 20 min = 5
 }
+
+function myProf() {
+    window.open("https://github.com/rrokusan");
+}

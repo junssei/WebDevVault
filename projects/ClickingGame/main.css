@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+*{
+    font-family: 'Rubik Mono One', monospace;
+}
+
 body{
     font-size: 2vh;
-    font-family: monospace;
     background-image: url(Images/black-background.gif);
     background-size: cover;
     color: antiquewhite;
@@ -21,12 +25,21 @@ body{
     z-index: 1000;
     left: 0;
     top: 0;
+    user-select: none;
+}
+
+#menuTitle{
+    position: relative;
+    top: 10vh;
+    width: auto;
+    height: 25vh;
+    object-fit: contain;
 }
 
 #menuSelection{
     position:relative;
-    top: 30vh;
-    font-size:3vh;
+    top: 20vh;
+    font-size:2.1vh;
 }
 
 #menuStart, #menuLeaderboard, #menuSupport{
@@ -35,6 +48,7 @@ body{
 }
 
 #menuStart:hover, #menuLeaderboard:hover, #menuSupport:hover{
+    transition: 1s;
     color: red;
 }
 
@@ -93,11 +107,11 @@ body{
     border: 1px solid #888;
     width: 80%;
     color: black;
-    font-size: 5vh;
+    font-size: 3vh;
 }
 
 #redo{
-    font-size: 3vh;
+    font-size: 2vh;
     padding: 2vh 5vh;
     text-align: center;
     background-color: rgb(255, 230, 91);

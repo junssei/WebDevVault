@@ -1,4 +1,4 @@
-var mstke = 0;
+var mstke = 3;
 var score = 0;
 var hit = document.getElementById("target");
 var box = document.getElementById("dialBox");
@@ -6,6 +6,10 @@ var dmg = document.getElementById("mistakeColor");
 var menu = document.getElementById("menuContainer");
 var game = document.getElementById("container");
 var area = document.getElementById("targetArea");
+var sb = document.getElementById("scoreboard");
+
+document.getElementById("mistakedisp").textContent=mstke;
+document.getElementById("scoredisp").textContent=score;
 
 function start(){
     menu.style.display = "none";
@@ -13,12 +17,13 @@ function start(){
 }
 
 function mistke() {
-    mstke++;
+    mstke--;
     document.getElementById("mistakedisp").innerHTML = mstke;
-    if (mstke == 3) {
+    if (mstke == 0) {
+        sb.style.display = "none";
         box.style.display = "block";
         hit.style.display = "none";
-        mstke = 0;
+        mstke = 3;
     }
 }
 
@@ -37,7 +42,7 @@ document.addEventListener('click', function (event) {
 });
 
 function hitTarget() {
-    score++; mstke--;
+    score++; mstke++;
     var max = 20, min = 5, topmax = 75, topmin = 10, leftmax = 90, leftmin = 10;
     document.getElementById("scoredisp").innerHTML = score;
     /*left: 84vh; /*max = 168 normal = 84, min: 5% max: 95%*/

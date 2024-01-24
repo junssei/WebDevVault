@@ -5,19 +5,46 @@ body{
     background-size: cover;
     color: antiquewhite;
     text-align: center;
-    margin-top: 2vh;
     cursor: crosshair;
     background-repeat: no-repeat;
     max-width:100%;
     max-height:100%;
 }
 
+#menuContainer{
+    display: block;
+    /*background-color: red;*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+}
+
+#menuSelection{
+    position:relative;
+    top: 30vh;
+    font-size:3vh;
+}
+
+#menuStart, #menuLeaderboard, #menuSupport{
+    cursor: pointer;
+    user-select: none;
+}
+
+#menuStart:hover, #menuLeaderboard:hover, #menuSupport:hover{
+    color: red;
+}
+
 #container{
     position: relative;
+    display: none;
 }
 
 #target{
-    transition: 0.2s;
+    transition: 0.5s;
     position:absolute;
     left: 50%;  /*84vh; /*max = 168 normal = 84, min: 5% max: 95%*/
     top: 50%;   /*31vh; /*max = 50 normal = 31, min: 40% max: 120%*/
@@ -25,7 +52,7 @@ body{
     height: 20vh;
     object-fit: contain;
     user-select: none;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 10%);
 }
 
 #targetArea{
@@ -90,3 +117,4 @@ body{
     left: 0;
     top: 0;
 }
+

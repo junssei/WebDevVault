@@ -3,6 +3,14 @@ var score = 0;
 var hit = document.getElementById("target");
 var box = document.getElementById("dialBox");
 var dmg = document.getElementById("mistakeColor");
+var menu = document.getElementById("menuContainer");
+var game = document.getElementById("container");
+
+function start(){
+    menu.style.display = "none";
+    game.style.display = "block";
+    mstke--;
+}
 
 function mistke() {
     mstke++;

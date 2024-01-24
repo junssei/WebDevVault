@@ -45,10 +45,12 @@ body{
 #menuStart, #menuLeaderboard, #menuSupport{
     cursor: pointer;
     user-select: none;
+    transition: 0.5s;
 }
 
 #menuStart:hover, #menuLeaderboard:hover, #menuSupport:hover{
-    transition: 1s;
+    transition-timing-function: ease-in-out;
+    font-size: 5vh;
     color: red;
 }
 
@@ -58,7 +60,7 @@ body{
 }
 
 #target{
-    transition: 0.5s;
+    /*transition: 0.5s;*/
     position:absolute;
     left: 50%;  /*84vh; /*max = 168 normal = 84, min: 10% max: 90%*/
     top: 35%;   /*31vh; /*max = 50 normal = 31, min: 10% max: 75%*/

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 *{
-    font-family: 'Rubik Mono One', monospace;
+    font-family: 'Audiowide', sans-serif;
 }
 
 body{
@@ -30,15 +32,15 @@ body{
 
 #menuTitle{
     position: relative;
-    top: 10vh;
+    top: 5vh;
     width: auto;
-    height: 25vh;
+    height: 40vh;
     object-fit: contain;
 }
 
 #menuSelection{
     position:relative;
-    top: 20vh;
+    top: 10vh;
     font-size:2.1vh;
 }
 
@@ -51,7 +53,7 @@ body{
 #menuStart:hover, #menuLeaderboard:hover, #menuSupport:hover{
     transition-timing-function: ease-in-out;
     font-size: 5vh;
-    color: red;
+    color: #3cd7ec;
 }
 
 #container{

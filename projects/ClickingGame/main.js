@@ -36,7 +36,7 @@ target.addEventListener('click', mistke);
 document.addEventListener('click', function (event) {
     if (event.target == area) {
         setTimeout(() => { dmg.style.display = "block" }, 100);
-        setTimeout(() => { dmg.style.display = "none" }, 200);
+        setTimeout(() => { dmg.style.display = "none" }, 150);
         mistke();
     }
 });
@@ -57,4 +57,8 @@ function hitTarget() {
 
 function myProf() {
     window.open("https://github.com/rrokusan");
+}
+
+function countdown(){
+
 }

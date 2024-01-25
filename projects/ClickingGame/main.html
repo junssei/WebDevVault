@@ -13,27 +13,32 @@
             <h1 id="menuSupport" onclick="myProf();"> SUPPORT </h1>
         </div>
     </div>
-    <div id="container">
-        <div id="scoreboard">
-            <div id="scoreSect">
-                <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
-            </div>
-            <div id="mistakeColor"></div> 
-            <div id="mistakeSect">
-                <h1> LIVES </h1> <h1 id="mistakedisp"></h1>
-            </div>
-        </div>
-
+    <div id="gameContainer">
+        <div id="mistakeColor"></div>
         <div id="dialBox">
             <div id="dialBoxContent">
-                <p> YOU FAILED! </p>
+                <p id="dialMsg"> YOU FAILED! </p>
                 <button id="redo" onclick="redo();"> Play Again </button>
             </div>
         </div>
+        <div id="gamesubContainer">
+            <div id="header">
+                <h1 id="zunetime"> 60 </h1>
+            </div>
 
-        <div id="targetContainer">
-            <div id="targetArea">
-                <img src="Images/target.png" id="target" onclick="hitTarget();" draggable="false">
+            <div id="middle">
+                <div id="targetArea">
+                    <img id="target" src="Images/target.png"  onclick="hitTarget();" draggable="false">
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="scoreSect">
+                    <h1> SCORE </h1> <h1 id="scoredisp"> 0 </h1>
+                </div>
+                <div id="mistakeSect">
+                    <h1> LIVES </h1> <h1 id="mistakedisp"></h1>
+                </div>
             </div>
         </div>
     </div>

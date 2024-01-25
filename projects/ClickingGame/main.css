@@ -3,18 +3,17 @@
 
 *{
     font-family: 'Audiowide', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    font-size: 2vh;
+    font-size: 1.5vh;
     background-image: url(Images/black-background.gif);
     background-size: cover;
     color: antiquewhite;
     text-align: center;
     cursor: crosshair;
     background-repeat: no-repeat;
-    max-width:100%;
-    max-height:100%;
 }
 
 #menuContainer{
@@ -56,10 +55,38 @@ body{
     color: #3cd7ec;
 }
 
-#container{
-    position: relative;
+#gameContainer{
     display: none;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
+
+#gamesubContainer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#header, #footer{
+    /*background-color: #3cd7ec4b;*/
+    user-select: none;
+}
+
+#middle{
+    /*border: 3px solid red;*/
+    flex-grow: 1;
+    position: relative; /* Change to relative */
+}
+
+/*#footer{
+    background-color: #3cd7ec4b;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}*/
 
 #target{
     /*transition: 0.5s;*/
@@ -71,17 +98,6 @@ body{
     object-fit: contain;
     user-select: none;
     transform: translate(-50%, 10%);
-}
-
-#targetArea{
-    position: relative;
-    /*border: 5px solid red;*/
-    width: 100%;
-    height: 100%;
-}
-
-#scoreboard{
-    display: inline;
 }
 
 #scoreSect{
@@ -96,20 +112,17 @@ body{
 
 #dialBox{
     display: none;
-    position: fixed;
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+    user-select: none;
 }
 #dialBoxContent{
     background-color: #fefefe;
     padding: 5vh;
     color: black;
-    font-size: 3vh;
-    transform: translate(0, 130%);
+    font-size: 5vh;
+    transform: translate(0, 100%);
 }
 
 #redo{

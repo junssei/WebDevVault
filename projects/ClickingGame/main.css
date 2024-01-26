@@ -117,6 +117,7 @@ body{
     opacity: 0.8;
     user-select: none;
 }
+
 #dialBoxContent{
     background-color: #fefefe;
     padding: 5vh;

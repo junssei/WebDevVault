@@ -98,6 +98,8 @@ body{
     object-fit: contain;
     user-select: none;
     transform: translate(-50%, 10%);
+    border: #3cd7ec solid;
+    border-radius: 100%;
 }
 
 #scoreSect{

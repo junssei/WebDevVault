@@ -5,7 +5,7 @@ var max = 20, min = 5,
 
 //header
 var header = document.getElementById("header");
-var seconds = 5;
+var seconds = 30;
 
 //footer
 var mstke = 3, score = 0;
@@ -73,14 +73,22 @@ function hitTarget() {
     score++; mstke++;
     document.getElementById("scoredisp").innerHTML = score;
     
+    //Target width n height, min 5 max 20
+    const newWidth = getRandomNumber(5, 20);
+    const newHeight = newWidth;
+
     if(score == 1) {
         countdown();
     }
 
     hit.style.top = Math.floor(Math.random() * (topmax - topmin + 1)) + topmin + '%'; //max = 50
     hit.style.left = Math.floor(Math.random() * (leftmax - leftmin + 1)) + leftmin + '% '; //max = 168
-    hit.style.width = Math.floor(Math.random() * (max - min + 1)) + min + 'vh'; //max = 20 min = 5
-    hit.style.height = Math.floor(Math.random() * (max - min + 1)) + min + 'vh'; //max = 20 min = 5
+    hit.style.width = newWidth+"vh";
+    hit.style.height = newHeight+"vh";
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //Support Button

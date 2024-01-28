@@ -95,7 +95,7 @@ body{
     top: 35%;   /*31vh; /*max = 50 normal = 31, min: 10% max: 75%*/
     width: 20vh;
     height: 20vh;
-    object-fit: contain;
+    /*object-fit: contain;*/
     user-select: none;
     transform: translate(-50%, 10%);
     border: #3cd7ec solid;

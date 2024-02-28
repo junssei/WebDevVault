@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Cascadia Code;
+        }
+
+        body {
+            background-color: black;
+            margin: 2em 2em 1em 2em;
+        }
+
+        #list-area{
+            position: relative;
+            align-content: center;
+            justify-content: center;
+            padding: 1em 3em 3em 3em;
+            background-color: blanchedalmond;
+            border-radius: 25px;
+        }
+
+        #list-area h1{
+            text-align: center;
+        }
+
+        /*top, right, bottom, left*/
+        #listinger li{
+            margin: 10px 0 10px 0;
+            font-size: 20px;
+        }
+
+        #listinger li:hover{
+            background-color: aquamarine;
+            transition: ease-out 1s;
+        }
+
+        #addLst {
+            background-color: aquamarine;
+        }
+
+        #delLst {
+            background-color: rgb(255, 118, 118);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="list-area">
+        <h1> To-Do List </h1>
+        <ol id="listinger"> </ol>
+        <button id="addLst" onclick="addList()"> + </button>
+        <button id="delLst" onclick="deleteAll()"> x </button>
+    </div>
+
+    <script>
+        var counter = 0;
+
+        function addList(){
+            var List = document.getElementById("listinger").innerHTML;
+            let task = prompt("Please enter your name", "");
+            if (task != null) {
+                counter++; console.log(counter);
+                document.getElementById("listinger").innerHTML =
+                List + '<li onclick="deleteList(this)">' + task + '</li>';
+            }
+        }
+
+        function updateList(object){
+            var update = prompt("Do you want to update the list: ", "");
+
+            if(update != null){
+                object.innerHTML = update;
+            }
+        }
+
+        function deleteList(object){
+            var obj = object;
+            var answer = confirm("Are you sure you want to delete this? ");
+
+            if(answer){
+                object.remove();
+            } else {
+                updateList(obj);
+            }
+        }
+
+        function deleteAll(){
+            document.getElementById("listinger").remove();
+        }
+
+        
+    </script>
+</body>
+</html>

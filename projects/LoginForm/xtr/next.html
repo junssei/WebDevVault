@@ -1,0 +1,103 @@
+<html>
+<head> 
+	<title> First Page </title>
+</head>
+<style>
+	*{
+		font-family: Cascadia Code;
+	}
+	body{
+		background: black;
+	}
+
+	#full{
+		display: grid;
+	}
+
+	#fillupForm {
+        position: absolute;
+        top: 10vh;
+        left: 10%;
+        background: silver;
+        padding: 2em 3em 1em 3em;
+    }
+	
+	input[type=text], input[type=password], input[type=number], input[type=email], input[type=date]{
+        width: 100%;
+        padding: 10px 25px 10px 25px;
+        margin: 10px 0px 10px 0px;
+        box-sizing: border-box;
+    }
+
+	input[type=radio]{
+		padding: 10px 10px;
+		margin: 10px 0px 10px 30px;
+	}
+
+	#submitBtn{
+		background-color: #04AA6D;
+        border: solid 1px black;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        left: 6.5em;
+	}
+
+	#displayList{
+		position: absolute;
+        top: 10vh;
+        left: 60%;
+        background: red;
+        padding: 2em 3em 20em 3em;
+	}
+</style>
+<body>
+	<div id="full">
+		<div id="fillupForm" class="gridItem">
+		<form id="formInputs">
+			<label for="lname"> Name </label><br>
+				<input type="text" id="lname"></br>
+			<label for="lage"> Age </label><br>
+				<input type="number" id="lage"></br>
+			<label for="lgender"> Gender </label><br>
+				<input type="radio" id="lgender" name="gender">
+					<label for="male"> Male </label>
+				<input type="radio" id="lgender" name="gender">
+					<label for="female"> Female </label><br>
+			<label for="laddress"> Address </label><br>
+				<input type="text" id="laddress"><br>
+			<label for="lemail"> Email </label><br>
+				<input type="email" id="lemail"><br>
+			<label for="lbirthDate"> Date of Birth </label><br>
+				<input type="date" id="lbirthDate"><br>
+		</form>
+			<button id="submitBtn" onclick="submitBtnFn()"> SUBMIT </button>
+		</div>
+		<div id="displayList" class="gridItem">
+			<h4> Information </h4>
+			<ul id="infolist"> 
+				
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		var name = document.getElementById("lname").value;
+		var age = document.getElementById("lage").value;
+		var gender = document.getElementById("lgender").value;
+		var address = document.getElementById("laddress").value;
+		var email = document.getElementById("lemail").value;
+		var birthday = document.getElementById("lbirthDate").value;
+		var list = document.getElementById("infolist").innerHTML;
+
+		function submitBtnFn(){
+			document.getElementById("infolist").innerHTML = list + "<li> Name: " + name + "</li>";
+		}
+	</script>
+</body>
+</html>

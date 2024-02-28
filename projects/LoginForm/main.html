@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login Page </title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <div id="formArea">
+            <form id="loginForm" action="">
+                <label for="fusername"> Username </label><br>
+                    <input type="text" id="fusername"><br><br>
+                <label for="fpassword"> Password </label><br>
+                    <input type="password" id="fpassword"><br><br>
+                    <input type="submit" id="fsubmit" onclick="loginSubmit()" value="LOGIN">
+            </form>
+            <p id="errorMsg"></p>
+        </div>
+    </div>
+
+    <script>
+        function loginSubmit(){
+            var username = document.getElementById("fusername").value;
+            var password = document.getElementById("fpassword").value;
+            
+            if(username == "june" && password == "fernandez"){
+                alert("Login Successfully!");
+                document.getElementById("loginForm").action = "other.html";
+            } else {
+                alert("Wrong username/password!");
+            }
+        }
+    </script>
+</body>
+</html>

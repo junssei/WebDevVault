@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT FORM</title>
+</head>
+<style>
+    body {
+        background-image: url(Background.gif);
+        background-size: cover;
+    }
+
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        padding: 100px;
+        transform: translate(-50%, -50%);
+        background-color: #1a1a1a;
+        box-sizing: border-box;
+        outline: 1px solid #2adaf5;
+        box-shadow: 0px 3px 50px #2adaf5;
+        border-radius: 10px;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #bdb8b8;
+        font-size: 12px;
+    }
+
+    .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+
+    .login-box a:hover {
+        background: #000000;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ffffff,
+                    0 0 5px #ffffff,
+                    0 0 5px #ffffff,
+                    0 0 5px #ffffff;
+    }
+    
+    .login-box a span {
+        position: absolute;
+        display: block;
+    }
+
+    @keyframes btn-anim1 {
+        0% {
+            left: -100%;
+        }
+
+        50%,100% {
+            left: 100%;
+        }
+    }
+
+    .login-box a span:nth-child(1) {
+        bottom: 2px;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #03f40f);
+        animation: btn-anim1 2s linear infinite;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .flex-row > div > label {
+        font-size: 14px;
+        color: white;
+        font-weight: 400;
+    }
+
+    .span {
+        font-size: 14px;
+        margin-left: 5px;
+        color: #2d79f3;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    button {
+        padding: 0.8em 1.8em;
+        border: 2px solid #17C3B2;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        transition: .3s;
+        z-index: 1;
+        font-family: inherit;
+        color: #17C3B2;
+    }
+
+    button::before {
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background: #17C3B2;
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+
+    button:hover::before {
+        width: 105%;
+    }
+
+    button:hover {
+        color: #111;
+    }
+
+</style>
+<body>
+    <center><h1 style="color: white;">A I N C R A D</h1></center>
+    <div class="login-box">
+       <center><h1 style="color: #00bfff;">LOG-IN</h1></center><br  /><br  />
+          <div class="user-box">
+            <input type="text" id="uname" name="" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" id="pass" name="" required="">
+            <label>Password</label>
+          </div><center>
+
+        <div class="flex-row">
+            <div>
+            <input type="checkbox">
+            <label>Remember me </label>
+            </div>
+            <span class="span">Forgot password?</span>
+        </div><br  /><br  /><br  />
+
+            <button onclick="button();">Login</button><br  /><br  />
+            <p class="signup" style="color: white">Don't have an account ?
+                <a rel="noopener noreferrer" href="#" class="" style="color: white" onclick="button1()">Sign up</a>
+            </p>
+           
+      </div>
+
+<script>
+    function button(){
+        var username = document.getElementById("uname").value;
+        var password = document.getElementById("pass").value;
+
+    if(password == "Kiervyestole.14"){
+        window.location.href = "2ndPage.html";
+    }else{
+        alert("Wrong Password, Try again!!!");
+    }
+  }
+
+</script>
+    
+</body>
+</html>

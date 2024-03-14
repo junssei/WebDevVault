@@ -2,10 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>To-do List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #todoApp{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(180deg, rgba(94,94,94,1) 0%, rgba(47,47,47,1) 100%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #listArea{
+            top: 50px;
+            height: 100%;
+            min-height: 80vh;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 0px 50px;
+            position: relative;
+            display: grid;
+        }
+
+        .daList{
+            background-color: white;
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 20px;
+        }
+
+        #addSection{
+            transform: translate(-50%, 0);
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            width: 50%;
+            z-index: 1;
+        }
+
+        #row{
+            display: flex;
+            padding: 0;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            border: 5px #ffffff solid;
+        }
+
+        #row input{
+            margin-right: 10px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 25px;
+            padding-left: 20px;
+            border: none;
+            outline: none;
+            cursor: text;
+            background: transparent;
+        }
+
+        #row span{
+            padding: 10px 25px 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
-    
+    <!--all functions-->
+    <script>
+
+    </script>
+
+    <!--todolist-->
+    <div id="todoApp">
+        <div id="listArea">
+            <div class="daList">
+                Hello World
+            </div>
+            <div class="daList">
+                Hello June
+            </div>
+        </div>
+        
+        <div id="addSection"> <!--sticky bottom-->
+            <div id="row">
+                <input type="text">
+                <span class="material-symbols-outlined">add</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

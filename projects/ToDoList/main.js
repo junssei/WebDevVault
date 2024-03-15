@@ -43,19 +43,26 @@ function removeParent(object){
 function addItems(){
     var text = prompt("Type anything...");
 
-    var div = document.createElement("div");
-    var list = document.createElement("li");
-    var checkbx = document.createElement("input");
-    checkbx.setAttribute("type", "checkbox");
-    var listClose = document.createElement("span");
-    listClose.setAttribute("class", "material-symbols-outlined");
-    listClose.innerText = close;
+    if(text != null){
+        var div = document.createElement("div");
+        var list = document.createElement("li");
+        list.textContent = text;
+        var checkbx = document.createElement("input");
+        checkbx.setAttribute("type", "checkbox");
+        var listClose = document.createElement("span");
+        listClose.setAttribute("class", "material-symbols-outlined");
+        listClose.innerText = "close";
 
-    div.appendChild(list);
-    div.appendChild(checkbx);
-    div.appendChild(listClose);
-    
-    document.getElementsByClassName("daListItems").appendChild(div);
+        div.appendChild(list); 
+        list.appendChild(checkbx);
+        div.appendChild(listClose);
+        
+        var specificdivs = document.getElementsByClassName("daListItems");
+
+        for (var i = 0; i < specificdivs.length; i++){
+            specificdivs[i].appendChild(div.cloneNode(true));
+        }
+    }
 }
 
 function removeItems(){

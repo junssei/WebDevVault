@@ -21,57 +21,21 @@
             <div class="daList">
                 <div class="daListHeader">
                     <h1 class="listTitle">Hello World</h1>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <ul class="daListItems">
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> Jessa </li><span class="material-symbols-outlined">close</span></div>
-                </ul>
-                    <span class="material-symbols-outlined">add_box</span>
-            </div>
-            <div class="daList">
-                <div class="daListHeader">
-                    <h1 class="listTitle">Hello World</h1>
-                    <span class="material-symbols-outlined">close</span>
+                    <span class="material-symbols-outlined" onclick="removeParent(this)">close</span>
                 </div>
                 <ul class="daListItems">
                     <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
                     <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
                     <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
                 </ul>
-                    <span class="material-symbols-outlined">add_box</span>
-            </div>
-            <div class="daList">
-                <div class="daListHeader">
-                    <h1 class="listTitle">Hello World</h1>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <ul class="daListItems">
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                </ul>
-                    <span class="material-symbols-outlined">add_box</span>
-            </div>
-            <div class="daList">
-                <div class="daListHeader">
-                    <h1 class="listTitle">Hello World</h1>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <ul class="daListItems">
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                </ul>
-                    <span class="material-symbols-outlined">add_box</span>
+                    <span class="material-symbols-outlined" id="childboxBtn" onclick="addItems()">add_box</span>
             </div>
         </div>
         
         <div id="addSection"> <!--sticky bottom-->
             <div id="row">
-                <input type="text" placeholder="Type something...">
-                <span class="material-symbols-outlined" onclick="addbtnList()">add</span>
+                <input type="text" id="title" placeholder="Type something...">
+                <span class="material-symbols-outlined" onclick="addParent()">add</span>
             </div>
         </div>
     </div>

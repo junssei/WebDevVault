@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 30px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+#header{
+    user-select: none;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: orange;
+    align-items: center;
+}
+
+#header span{
+    font-size: 50px;
+    color: orange;
+    margin-right: 10px;
+}
+
+#todoApp{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(94,94,94,1) 0%, rgba(47,47,47,1) 100%);
+    display: flex;
+    flex-flow: column;
+}
+
+#listArea{
+    max-height: 80vh;
+    border-radius: 30px 10px 10px 30px;
+    border: 2px solid white;
+    margin: 10px 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5em;
+    justify-content: center;
+    justify-items: center;
+}
+
+.daList{
+    background-color: white;
+    font-size: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    transition: 1s;
+    width: 100%;
+}
+
+.daList input{
+    outline: none;
+    size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.daList span{
+    font-size: 40px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.daList:hover{
+    transform: scale(1.02);
+}
+
+.daListHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.daListHeader span:hover{
+    color: red;
+}
+
+.daList h1{
+    text-align: center;
+}
+
+.daListItems{
+   position: relative;
+}
+
+.daListItems div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.daListItems li{
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+.daListItems span{
+    font-size: 20px;
+}
+
+#addSection{
+    bottom: 1em;
+    position:fixed;
+    align-self: center;
+    width: 50%;
+    z-index: 1;
+}
+
+#row{
+    display: flex;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 5px #ffffff solid;
+}
+
+#row input{
+    margin-right: 10px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 25px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    cursor: text;
+    background: transparent;
+}
+
+#row span{
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: orange;
+    user-select: none;
+}
+
+#row span:hover{
+    background-color: darkorange;
+}

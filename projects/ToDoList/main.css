@@ -86,13 +86,11 @@ body{
     size: 30px;
     width: 30px;
     height: 30px;
-    cursor: pointer;
 }
 
 .daList span{
     font-size: 40px;
     user-select: none;
-    cursor: pointer;
 }
 
 .daList:hover{
@@ -103,6 +101,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .daListHeader span:hover{
@@ -122,13 +121,15 @@ body{
     font-size: 30px;
 }
 
+.daListItems p{
+    width: 100%;
+    border: none;
+    font-size: 30px;
+}
+
 .daItem{
     display: flex;
     align-items: center;
-}
-
-.daItem p{
-    flex-grow: 1;
 }
 
 #editItem:hover{

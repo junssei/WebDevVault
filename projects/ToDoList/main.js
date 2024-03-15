@@ -1,11 +1,3 @@
-function update(object){
-    var chng = prompt("Type to edit your title");
-
-    if(chng != null){
-        object.innerText = chng;
-    }
-}
-
 function addParent(){
     var text = document.getElementById("title").value;
 
@@ -24,13 +16,16 @@ function addParent(){
     closeBtn.setAttribute("onclick", "removeParent(this)");
     closeBtn.innerText = "close";
 
-    var dalistItems = document.createElement("ul");
+    var dalistItems = document.createElement("div");
     dalistItems.setAttribute("class", "daListItems");
+    
+    var dasetItems = document.createElement("ul");
+    dasetItems.setAttribute("class", "dasetItems");
 
     var addboxBtn = document.createElement("span");
     addboxBtn.setAttribute("class", "material-symbols-outlined");
     addboxBtn.setAttribute("id", "childboxBtn");
-    addboxBtn.setAttribute("onclick", "addItems()");
+    addboxBtn.setAttribute("onclick", "addItem()");
     addboxBtn.innerText = "add_box";
 
     listHeader.appendChild(title);
@@ -38,9 +33,43 @@ function addParent(){
 
     newdaList.appendChild(listHeader);
     newdaList.appendChild(dalistItems);
+    dalistItems.appendChild(dasetItems);
     newdaList.appendChild(addboxBtn);
 
     document.getElementById("listArea").appendChild(newdaList);
+}
+
+function addItem(){
+    var item = prompt("Add Item");
+
+    if(item != null){
+        var list = document.createElement("li");
+        list.setAttribute("class", "daItem");
+
+        var textNode = document.createElement("p");
+        textNode.innerText = item;
+
+        var delbtn = document.createElement("span");
+        delbtn.setAttribute("class", "material-symbols-outlined");
+        delbtn.setAttribute("id", "deltItem");
+        delbtn.setAttribute("onclick", "removeItem(this)");
+        delbtn.innerText = "delete";
+
+        list.appendChild(textNode);
+        list.appendChild(delbtn);
+
+        var specificUl = document.querySelector(".dasetItems");
+
+        specificUl.appendChild(list);
+    }
+}
+
+function updateParent(object){
+    var chng = prompt("Type to edit your title");
+
+    if(chng != null){
+        object.innerText = chng;
+    }
 }
 
 function removeParent(object){
@@ -48,24 +77,15 @@ function removeParent(object){
     parent.parentNode.removeChild(parent);
 }
 
-function addItems(object){
-    var text = prompt("Type to add an item");
-
-    
-
-}
-
 function updateItem(object){
-    var text = prompt("Type to edit the item");
-    var node = object.parentNode;
-    
+    var text = prompt("Update Item");
+
+    if(text!=null){
+    object.innerText = text;
+    }
 }
 
 function removeItem(object){
-    var text = prompt("Type to edit the item");
-    var node = object.parentNode;
-}
-
-function itemsCheck(){
-
+    var parent = object.parentNode;
+    parent.parentNode.removeChild(parent);
 }

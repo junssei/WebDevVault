@@ -1,3 +1,11 @@
+function update(object){
+    var chng = prompt("Type to edit your title");
+
+    if(chng != null){
+        object.innerText = chng;
+    }
+}
+
 function addParent(){
     var text = document.getElementById("title").value;
 
@@ -40,33 +48,22 @@ function removeParent(object){
     parent.parentNode.removeChild(parent);
 }
 
-function addItems(){
-    var text = prompt("Type anything...");
+function addItems(object){
+    var text = prompt("Type to add an item");
 
-    if(text != null){
-        var div = document.createElement("div");
-        var list = document.createElement("li");
-        list.textContent = text;
-        var checkbx = document.createElement("input");
-        checkbx.setAttribute("type", "checkbox");
-        var listClose = document.createElement("span");
-        listClose.setAttribute("class", "material-symbols-outlined");
-        listClose.innerText = "close";
+    
 
-        div.appendChild(list); 
-        list.appendChild(checkbx);
-        div.appendChild(listClose);
-        
-        var specificdivs = document.getElementsByClassName("daListItems");
-
-        for (var i = 0; i < specificdivs.length; i++){
-            specificdivs[i].appendChild(div.cloneNode(true));
-        }
-    }
 }
 
-function removeItems(){
+function updateItem(object){
+    var text = prompt("Type to edit the item");
+    var node = object.parentNode;
+    
+}
 
+function removeItem(object){
+    var text = prompt("Type to edit the item");
+    var node = object.parentNode;
 }
 
 function itemsCheck(){

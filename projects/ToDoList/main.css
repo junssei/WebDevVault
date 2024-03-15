@@ -63,15 +63,13 @@ body{
     max-height: 80vh;
     border-radius: 30px 10px 10px 30px;
     /*border: 2px solid white;*/
-    margin: 10px 50px;
+    margin: 10px 100px;
     overflow-x: hidden;
     overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(3, 500px);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2em 4em;
-    justify-content: center;
-    justify-items: center;
 }
 
 .daList{
@@ -115,24 +113,30 @@ body{
     text-align: center;
 }
 
-.daListItems{
-   position: relative;
-}
-
-.daListItems div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.daListItems li{
+.daListItems ul li{
     list-style-type: none;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .daListItems span{
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.daItem{
+    display: flex;
+    align-items: center;
+}
+
+.daItem p{
+    flex-grow: 1;
+}
+
+#editItem:hover{
+    color: rgb(255, 191, 0);
+}
+
+#deltItem:hover{
+    color: rgb(255, 0, 0);
 }
 
 #addSection{

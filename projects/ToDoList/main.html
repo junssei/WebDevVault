@@ -8,36 +8,44 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <!--all functions-->
-    <script src="main.js"></script>
+<!--all functions-->
+<script src="main.js"></script>
 
-    <!--todolist-->
-    <div id="todoApp">
-        <div id="header">
-            <span class="material-symbols-outlined">checklist</span>
-            <h1> TO-DO LIST </h1>
-        </div>
-        <div id="listArea"> <!--all inputted list-->
-            <div class="daList">
-                <div class="daListHeader">
-                    <h1 class="listTitle">Hello World</h1>
-                    <span class="material-symbols-outlined" onclick="removeParent(this)">close</span>
-                </div>
-                <ul class="daListItems">
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
-                    <div><li><input type="checkbox"> June </li><span class="material-symbols-outlined">close</span></div>
+<!--todolist-->
+<div id="todoApp">
+    <div id="header">
+        <span class="material-symbols-outlined">checklist</span>
+        <h1> TO-DO LIST </h1>
+    </div>
+    <div id="listArea"> <!--all inputted list-->
+        <div class="daList">
+            <!--Title List-->
+            <div class="daListHeader">
+                <h1 class="listTitle" onclick="update(this)">Hello World</h1>
+                <span class="material-symbols-outlined" onclick="removeParent(this)">close</span>
+            </div>
+            <!--Item List-->
+            <div class="daListItems">
+                <ul>
+                    <li class="daItem">
+                        <p>June</p>
+                        <span class="material-symbols-outlined" id="editItem"> edit </span>
+                        <span class="material-symbols-outlined" id="deltItem"> delete </span>
+                    </li>
                 </ul>
-                    <span class="material-symbols-outlined" id="childboxBtn" onclick="addItems()">add_box</span>
             </div>
-        </div>
-        
-        <div id="addSection"> <!--sticky bottom-->
-            <div id="row">
-                <input type="text" id="title" placeholder="Type something...">
-                <span class="material-symbols-outlined" onclick="addParent()">add</span>
-            </div>
+
+            <span class="material-symbols-outlined" id="childboxBtn" onclick="addItems(this)">add_box</span>
         </div>
     </div>
+    
+    <!--sticky bottom-->
+    <div id="addSection"> 
+        <div id="row">
+            <input type="text" id="title" placeholder="Type something..." autofocus>
+            <span class="material-symbols-outlined" onclick="addParent()">add</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

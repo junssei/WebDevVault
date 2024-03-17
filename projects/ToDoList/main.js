@@ -1,4 +1,8 @@
+var count = -1; 
+
 function addParent(){
+    count++;
+    console.log(count);
     var text = document.getElementById("title").value;
 
     var newdaList = document.createElement("div");
@@ -9,6 +13,7 @@ function addParent(){
 
     var title = document.createElement("h1");
     title.setAttribute("class", "listTitle");
+    title.setAttribute("onclick", "updateParent(this)");
     title.innerText = text;
 
     var closeBtn = document.createElement("span");
@@ -25,7 +30,8 @@ function addParent(){
     var addboxBtn = document.createElement("span");
     addboxBtn.setAttribute("class", "material-symbols-outlined");
     addboxBtn.setAttribute("id", "childboxBtn");
-    addboxBtn.setAttribute("onclick", "addItem()");
+    addboxBtn.setAttribute("onclick", "addItem(this)");
+    addboxBtn.setAttribute("data-ul-index", count);
     addboxBtn.innerText = "add_box";
 
     listHeader.appendChild(title);
@@ -39,28 +45,36 @@ function addParent(){
     document.getElementById("listArea").appendChild(newdaList);
 }
 
-function addItem(){
+function addItem(button){
     var item = prompt("Add Item");
 
     if(item != null){
-        var list = document.createElement("li");
-        list.setAttribute("class", "daItem");
+        var ulIndex = parseInt(button.getAttribute("data-ul-index"));
+        var ulList = document.querySelectorAll("ul.dasetItems");
 
-        var textNode = document.createElement("p");
-        textNode.innerText = item;
+        // var textNode = document.createElement("p");
+        // textNode.textContent = item;
 
-        var delbtn = document.createElement("span");
-        delbtn.setAttribute("class", "material-symbols-outlined");
-        delbtn.setAttribute("id", "deltItem");
-        delbtn.setAttribute("onclick", "removeItem(this)");
-        delbtn.innerText = "delete";
+        if (ulIndex >= 0 && ulIndex < ulList.length) {
+            var ulElement = ulList[ulIndex];
+        
+            // Create a new list element
+            var newListElement = document.createElement("li");
+            newListElement.textContent = item;
+            
+            var delbtn = document.createElement("span");
+            delbtn.setAttribute("class", "material-symbols-outlined");
+            delbtn.setAttribute("id", "deltItem");
+            delbtn.setAttribute("onclick", "removeItem(this)");
+            delbtn.innerText = "delete";
 
-        list.appendChild(textNode);
-        list.appendChild(delbtn);
+            newListElement.appendChild(delbtn);
 
-        var specificUl = document.querySelector(".dasetItems");
-
-        specificUl.appendChild(list);
+            // Append the new list element to the ul tag
+            ulElement.appendChild(newListElement);
+        } else {
+            console.error("Invalid ul index specified");
+        }
     }
 }
 

@@ -132,6 +132,15 @@ body{
     align-items: center;
 }
 
+.dasetItems li{
+    display: flex;
+    align-items: center;
+}
+
+.dasetItems li span{
+    margin-left: auto;
+}
+
 #editItem:hover{
     color: rgb(255, 191, 0);
 }

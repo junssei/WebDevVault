@@ -1,2 +1,2 @@
 # WebDevVault
-all my school web development testing, projects, problems and lecture
+all my web development testing, projects, problems and lecture

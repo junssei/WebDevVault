@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>To-do List</title>
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body>
-<!--all functions-->
-<script src="main.js"></script>
 
-<!--todolist-->
-<div id="todoApp">
-    <div id="header">
-        <span class="material-symbols-outlined">checklist</span>
-        <h1> TO-DO LIST </h1>
-    </div>
-    <div id="listArea">
-        <!--all inputted list-->
-    </div>
-    <!--sticky bottom-->
-    <div id="addSection">
-        <div id="row">
-            <input type="text" id="title" placeholder="Type something..." autofocus required>
-            <span class="material-symbols-outlined" onclick="addParent()">add</span>
+<body>
+    <!--all functions-->
+    <script src="main.js"></script>
+
+    <!--todolist-->
+    <div id="todoApp">
+        <div id="header">
+            <span class="material-symbols-outlined">checklist</span>
+            <h1> TO-DO LIST </h1>
+        </div>
+        <div id="listArea">
+            <!--all inputted list-->
+        </div>
+        <!--sticky bottom-->
+        <div id="addSection">
+            <div id="row">
+                <input type="text" id="title" placeholder="Type something..." autofocus required>
+                <span class="material-symbols-outlined" onclick="addParent()">add</span>
+            </div>
         </div>
     </div>
-</div>
 </body>
+
 </html>

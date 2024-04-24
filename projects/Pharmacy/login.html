@@ -1,0 +1,37 @@
+<?php
+include('connect.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="logos">
+            <img src="images/logo.svg" alt="logo" draggable="false" />
+        </div>
+        <div id="loginbox">
+            <form>
+                <div id="usernameSect">
+                    <label> Username </label><br>
+                    <input class="inputbox" type="text" placeholder="Enter Username" autofocus required><br>
+                </div>
+                <div id="passwordSect">
+                    <label> Password </label><br>
+                    <input class="inputbox" type="password" placeholder="Enter password" autofocus required>
+                </div>
+                <input id="submitbtn" type="submit" value="Sign In">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

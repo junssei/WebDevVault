@@ -10,7 +10,7 @@ body{
     background: #2fb383;
     grid-template-columns: repeat(60, 3.3vh);
     grid-template-rows: repeat(30, 3.33vh);
-}
+} 
 
 #imgLogo{
     width: 416px;

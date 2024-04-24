@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    flex-direction: column;
+    background-color: #dfdfdf;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    background-color: #fff;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+}
+
+.content {
+    /* background-color: #ffffff; */
+    width: 100%;
+    height: 92%;
+}
+
+.sidebar {
+    background-color: #135D66;
+    color: white;
+    width: 20%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+}
+
+.sidebarheader {
+    background-color: #003C43;
+    height: 8%;
+    cursor: pointer;
+}
+
+.sidebarheader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.sidebarheader img {
+    /* 2.34375vw, 3.125vw */
+    width: 2.34375vw;
+    height: 2.34375vw;
+    margin-left: 1.0416666666666667vw;
+    margin-right: 1.0416666666666667vw;
+    /* border: solid red 2px; */
+}
+
+.companyname {
+    font-weight: 600;
+    font-size: 1.0416666666666667vw;
+}
+
+#userbox {
+    border-bottom: 0.5208333333333334vw solid #003C43;
+}
+
+#userbox,
+#usernamebox {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-links{
+    font-size: 1.5625vw;
+    font-weight: 500;
+}
+
+.sidebar-links li{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+
+.sidebar-links li a {
+    /* background-color: orange; */
+    padding: 0.6vw 1.5625vw;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-links li a img{
+    width: 1.3020833333333333vw;
+    height: 1.3020833333333333vw;
+    margin-right: 1.0416666666666667vw;
+}
+
+.sidebar-links .dropdown a{
+    justify-content: space-between;
+    width: 90%;
+}
+
+.sidebar-links .dropdown a .dropdownicon{
+    width: 0.7291666666666666vw;
+    height: 0.4166666666666667vw;
+}

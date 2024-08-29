@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>June's Profile</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #121212;
+        font-family: Roboto Mono;
+        color: #ffffff;
+        /* width: 100vw; */
+        height: 100vh;
+        overflow-x: hidden;
+      }
+
+      header {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        user-select: none;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 1000;
+      }
+
+      nav a:hover {
+        color: #2f44ff;
+        text-decoration-line: underline;
+      }
+
+      footer {
+        text-align: center;
+        position: relative;
+        bottom: 0;
+      }
+
+      footer ul {
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+        list-style-type: none;
+        display: flex;
+      }
+
+      footer ul li a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      #profilemain {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+      }
+
+      #profileimg {
+        /* background-color: aliceblue; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3%;
+        padding: 1.5%;
+        width: 40%;
+      }
+
+      #profileimg img {
+        width: 360px;
+        height: 360px;
+        margin-bottom: 26px;
+        border: #ffffff solid 6px;
+        border-radius: 100%;
+      }
+
+      #profileinfo {
+        width: 70%;
+        padding-left: 60px;
+        padding: 5%;
+      }
+
+      #aboutme p {
+        text-align: justify;
+      }
+
+      #profileinfo div h2 {
+        margin-bottom: 16px;
+      }
+
+      #profileinfo div {
+        margin-bottom: 26px;
+      }
+
+      #myskills ul {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #myskills ul li {
+        font-style: italic;
+        list-style: none;
+        margin-right: 3%;
+      }
+
+      #myprojects div {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #myprojects a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .active {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JuNe</h1>
+      <nav>
+        <a href="main2.html" class="active">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">PROJECTS</a>
+      </nav>
+    </header>
+    <div id="profilemain">
+      <div id="profileimg">
+        <img src="IMG_20230928_084518_392.png" />
+        <h1>June Vincent M. Fernandez</h1>
+        <p>3-BSIT</p>
+      </div>
+      <div id="profileinfo">
+        <div id="aboutme">
+          <h2>About Me</h2>
+          <p>
+            Hello, I’m June Vincent, a dedicated professional specializing in
+            Information Technology. With a strong background in IT and extensive
+            experience in coding and systems management, I am passionate about
+            harnessing technology to drive efficiency and innovation. My journey
+            in IT has equipped me with a diverse skill set, including
+            cybersecurity, software development. I take pride in solving complex
+            challenges and delivering effective solutions that meet
+            organizational goals. <br /><br />
+            Outside of my professional work, I enjoy immersing myself in anime
+            and K-dramas. These interests provide me with creative inspiration
+            and a refreshing perspective on storytelling and cultural dynamics.
+            I am always eager to explore new opportunities and collaborate with
+            like-minded professionals. Feel free to browse my site to learn more
+            about my work and connect with me for potential collaborations or
+            discussions.
+          </p>
+        </div>
+        <div id="myskills">
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>C++</li>
+            <li>JAVA</li>
+            <li>PYTHON</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+        <div id="myprojects">
+          <h2>Works</h2>
+          <div>
+            <a href="https://github.com/juvncent" target="_blank"> Github </a>
+            <a href="https://github.com/juvncent" target="_blank"> Patreon </a>
+            <a href="https://github.com/juvncent" target="_blank"> LinkedIn </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://github.com/juvncent" target="_blank"> Github </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/juneevv/" target="_blank">
+            Facebook
+          </a>
+        </li>
+        <li><a href="#" target="_blank"> Instagram </a></li>
+        <li><a href="#" target="_blank"> Twitter/X </a></li>
+        <li><a href="#" target="_blank"> Tiktok </a></li>
+        <li><a href="#" target="_blank"> YouTube </a></li>
+      </ul>
+      <p>&copy; 2024 June Vincent</p>
+    </footer>
+  </body>
+</html>

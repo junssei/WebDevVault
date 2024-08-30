@@ -4,38 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>June's Profile</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: ROBOTO MONO;
+      }
+
+      body {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      header {
+        padding: 16px;
+        display: flex;
+        top: 0;
+        background-color: #1a1a1a;
+        position: sticky;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header nav a {
+        color: white;
+        margin-right: 8px;
+        text-decoration: none;
+      }
+
+      article {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: 26px;
+      }
+
+      article img {
+        width: 360px;
+        height: 360px;
+        border-radius: 100%;
+        border: 2px solid #fff;
+      }
+
+      article h2 {
+        font-size: 60px;
+        margin-top: 36px;
+        margin-bottom: 16px;
+      }
+
+      article p {
+        margin-top: 16px;
+        text-align: justify;
+      }
+    </style>
   </head>
-  <body align="center">
+  <body>
     <header>
-      <h1>Personal Profile</h1>
-      <img src="IMG_20230928_084518_392.png" width="360px" height="360px" />
-      <h1>June Vincent M. Fernandez</h1>
+      <h1>June</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobby</a>
+        <a href="">Links</a>
+      </nav>
     </header>
-    <section>
-      <h2><u>About Me</u></h2>
+    <article id="about">
+      <img src="IMG_20230928_084518_392.png" />
+      <h2>HI, I'M JUNE VINCENT</h2>
       <p>
-        I'm a 3rd Year BSIT student at St. Michaels College. I love computers
-        and coding. <br />
-        I like watching anime and playing games
+        I'm 21 Years Old and I live in Kiwalan Iligan City. I'm currently a
+        Third Year Student at St Michaels College and taking course of Bachelor
+        of Science in Information Technology (BSIT).
       </p>
-      <h2><u> Skills </u></h2>
-      <p>
-        <em>
-          HTML &nbsp; CSS &nbsp; JAVASCRIPT &nbsp; C++ &nbsp; JAVA &nbsp; PYTHON
-          &nbsp; R &nbsp;
-        </em>
-      </p>
-      <h2><u>Social Media & Github</u></h2>
-      <a href="https://github.com/juvncent" target="_blank"> Github </a> &nbsp;
-      <a href="https://www.facebook.com/juneevv/" target="_blank"> Facebook </a>
-      &nbsp; <a href="#"> Instagram </a> &nbsp;
-      <a href="#"> Twitter/X </a> &nbsp; <a href="#"> Tiktok </a> &nbsp;
-      <a href="#"> YouTube </a> &nbsp;
+    </article>
+    <section id="hobbies">
+      <h2>Hobbies/Interest</h2>
+      <ul>
+        <li>I love coding</li>
+        <li>I love computers</li>
+        <li>I like watching anime and kdrama</li>
+        <li>I love mikha lim</li>
+        <li>I have favourite kpop: UNIS</li>
+        <li>I have favourite ppop: BINI</li>
+        <li></li>
+      </ul>
     </section>
-    <br /><br /><br />
-    <hr />
-    <br />
+
     <footer>
+      <a href="https://github.com/juvncent" target="_blank"> Github </a>
+      <a href="https://www.facebook.com/juneevv/" target="_blank"> Facebook </a>
+      <a href="#"> Instagram </a>
+      <a href="#"> Twitter/X </a>
+      <a href="#"> Tiktok </a>
+      <a href="#"> YouTube </a>
       <p>&copy; 2024 June Vincent</p>
     </footer>
   </body>

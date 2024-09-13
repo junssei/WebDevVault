@@ -281,7 +281,7 @@ nav ul li a:hover {
 
 .subcontainer {
   color: var(--white);
-  background-color: var(--accent);
+  background-color: var(--primary);
   flex-direction: column;
   margin-right: 32px;
   overflow: hidden;
@@ -336,6 +336,96 @@ nav ul li a:hover {
 
 /* Contact */
 #contact {
-  width: 100%;
   height: 40vh;
+  padding: 42px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact .info {
+  width: 60%;
+  line-height: 2.5;
+}
+
+#contact .info p {
+  width: 80%;
+}
+
+#contact .form {
+  width: 40%;
+  position: relative;
+  /* background-color: var(--accent); */
+}
+
+#contact .form label {
+  margin-bottom: 9px;
+}
+
+#contact .form [type="submit"] {
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: var(--accent);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  margin-top: 16px;
+}
+
+#contact .form [type="submit"]:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.form div {
+  margin-bottom: 8px;
+}
+
+.form input[type="text"],
+[type="email"] {
+  height: 42px;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.form [type="email"] {
+  width: 100%;
+}
+
+.form_fullname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: #000; */
+}
+
+.form_fullname span,
+.form_emailadd,
+.form_message {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_fullname span {
+  width: 100%;
+}
+
+.form_fname {
+  margin-right: 32px;
+}
+
+.form_message textarea {
+  resize: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+footer {
+  height: 30vh;
+  background-color: var(--primary);
 }

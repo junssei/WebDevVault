@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>June's Profile</title>
+    <style>
+      * {
+        margin: 0;
+        /* padding: 0; */
+        font-family: ROBOTO MONO;
+      }
+
+      body {
+        background-color: #121212;
+        color: #ffffff;
+        width: 100%;
+      }
+
+      header {
+        padding: 16px;
+        display: flex;
+        top: 0;
+        background-color: #1a1a1a;
+        position: sticky;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        user-select: none;
+      }
+
+      header nav a {
+        color: white;
+        font-size: 21px;
+        margin-right: 8px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      header nav a:hover {
+        color: #4c7766;
+        text-decoration: underline;
+        text-transform: lowercase;
+      }
+
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: 26px;
+        padding: 0 20%;
+      }
+
+      article img {
+        width: 360px;
+        height: 360px;
+        border-radius: 100%;
+        border: 2px solid #fff;
+      }
+
+      article h2 {
+        font-size: 60px;
+        margin-top: 36px;
+        margin-bottom: 16px;
+      }
+
+      article p {
+        font-size: 18px;
+        margin-top: 16px;
+        text-align: justify;
+      }
+
+      #secthobby {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        background-color: #e1d9d1;
+        color: #1a1a1a;
+      }
+
+      #secthobby h2 {
+        font-size: 50px;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      #hobbies {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+      }
+
+      #hobbies ul {
+        /* background-color: #1a1a1a; */
+        width: 60%;
+        display: inline-block;
+        text-align: left;
+      }
+
+      #hobbies ul li {
+        font-size: 21px;
+      }
+
+      #hobbies aside {
+        /* background-color: bisque; */
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 64px;
+      }
+
+      #hobbies aside img {
+        width: 111px;
+        height: 111px;
+        border-radius: 100%;
+        margin-right: 24px;
+      }
+
+      #hobbies aside p {
+        text-align: justify;
+      }
+
+      footer {
+        background-color: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+      }
+
+      footer nav {
+        margin-bottom: 32px;
+      }
+
+      footer nav a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 21px;
+      }
+
+      footer nav a:hover {
+        color: #4c7766;
+        text-decoration: underline;
+        text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><marquee behavior="alternate" width="100" scrolldelay="200">June</marquee></h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#secthobby">Hobby</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+    <article id="about">
+      <img src="IMG_20230928_084518_392.png" />
+      <h2><marquee behavior="slide" direction="up">HI, I'M JUNE VINCENT</marquee></h2>
+      <p>
+        21 Years Old and I live in Kiwalan Iligan City. I'm currently a Third
+        Year Student at St Michaels College and taking course of Bachelor of
+        Science in Information Technology (BSIT). My religion is Roman Catholic.
+      </p>
+    </article>
+    <section id="secthobby">
+      <h2>HOBBIES/INTEREST</h2>
+      <section id="hobbies">
+        <ul>
+          <li>I love coding</li>
+          <li>I love computers</li>
+          <li>I like watching anime and kdrama</li>
+          <li>I love mikha lim</li>
+          <li>Favourite KPOP/PPOP: UNIS & BINI</li>
+          <li>Dilaw - Maki</li>
+          <li>One Piece</li>
+          <li>Hiking</li>
+          <li>Video Editing</li>
+          <li>Photo Editing</li>
+          <li>Listening Music</li>
+          <li>Love to learn more</li>
+          <li>French Fries</li>
+          <li>Fried Chicken</li>
+          <li>PC Setup</li>
+          <li>Ninong Ry</li>
+          <li>KangKong Chips</li>
+          <li>Elon Musk</li>
+        </ul>
+        <aside id="quote">
+          <img src="kt3k56.jpg" />
+          <p>
+            <q
+              >If you set your goals ridiculously high and it's a failure, you
+              will fail above everyone else's success.</q
+            >
+            <br /><br />
+            -James Cameron
+          </p>
+        </aside>
+      </section>
+    </section>
+    <footer id="links">
+      <nav>
+        <a href="https://github.com/juvncent" target="_blank"> Github </a>
+        <a href="https://www.facebook.com/juneevv/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/jivincento/" target="_blank">Instagram </a>
+        <a href="#"> Twitter/X </a>
+        <a href="#"> Tiktok </a>
+        <a href="#"> YouTube </a>
+      </nav>
+      <p>&copy; 2024 June Vincent</p>
+    </footer>
+  </body>
+</html>

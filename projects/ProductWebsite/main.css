@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+
+:root {
+  --primary: #20b2aa;
+  --secondary: #f5deb3;
+  --accent: #ff6f61;
+  --neutral: #ffffff;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  padding: 15px 0 15px 0;
+  color: var(--white);
+  background-color: var(--primary);
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav h1 {
+  margin-left: 15px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 28px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: underline 4px;
+  text-decoration-color: transparent;
+  transition: 0.6s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline 4px;
+  color: var(--secondary);
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  position: relative;
+  background: url(images/pic4.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--secondary);
+  padding: 32px;
+}
+
+#hero div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#hero div p {
+  user-select: none;
+  font-size: 80px;
+  margin-bottom: 48px;
+  color: var(--white);
+  text-align: center;
+}
+
+#hero div a {
+  border-radius: 70px;
+  padding: 12px 26px;
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--primary);
+  margin-right: 16px;
+}
+
+#hero div a:hover {
+  color: var(--black);
+  background-color: var(--neutral);
+}
+
+/* Features and Pricing */
+#features {
+  background-color: var(--white);
+}
+
+#pricing {
+  background-color: var(--accent);
+}
+
+#features,
+#pricing {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 42px 0;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#features h2,
+#pricing h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 36px;
+}
+
+#pricing h2 {
+  color: var(--white);
+}
+
+/* All Box of Pricing and Features */
+.ftrscntnr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.pcrcntnr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  scale: 0.9;
+}
+
+.ftbx {
+  padding: 32px;
+  display: flex;
+  max-width: 400px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prctier {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 400px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white);
+  /* border: red solid 5px; */
+}
+
+.ftbx img {
+  align-self: center;
+  justify-self: center;
+  width: 72px;
+  height: 72px;
+}
+
+.ftbx img,
+.ftbx h3 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ftbx p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.ftbx img:hover {
+  animation: 1.5s alternate rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pricing */
+.prctier {
+  position: relative;
+  padding: 32px 64px;
+  /* height: 80vh; */
+}
+
+.prctier:hover {
+  scale: 1.03;
+  transition: 0.5s ease;
+}
+
+.ftbx ul {
+  margin-bottom: 21px;
+}
+
+.ftbx ul li {
+  line-height: 2;
+}
+
+.prctier a {
+  border-radius: 70px;
+  padding: 12px 26px;
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--primary);
+  margin-top: 42px;
+  /* position: absolute;
+  bottom: 32px; */
+}
+
+.prctier a:hover {
+  color: var(--black);
+  background-color: var(--accent);
+}
+
+/* Highlight Recommended Tier */
+.recommended {
+  background-color: var(--primary);
+  border-radius: 42px;
+  color: var(--white);
+  scale: 1.05;
+  z-index: 1;
+}
+
+.recommended:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+}
+
+.recommended a {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.recommended a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* Testimonial */
+#testimonial {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  padding: 32px 0;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#testimonial h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 36px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.subcontainer {
+  color: var(--white);
+  background-color: var(--primary);
+  flex-direction: column;
+  margin-right: 32px;
+  overflow: hidden;
+  display: flex;
+  padding: 42px;
+  width: 300px;
+  height: 250px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 200px;
+  max-height: 200px;
+  border-radius: 32px 24px;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.user img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.subcontainer q {
+  text-align: justify;
+  width: 100%;
+}
+
+/* Call to Action Section */
+#calltoaction {
+  height: 80vh;
+  background: url(images/a.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  position: relative;
+}
+
+#calltoaction p {
+  color: var(--white);
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#calltoaction a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 24px;
+  background-color: var(--primary);
+  border-radius: 70px;
+}
+
+#calltoaction a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* Contact */
+#contact {
+  height: auto;
+  padding: 42px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#contact .info {
+  width: 500px;
+  line-height: 2.5;
+}
+
+/* #contact .info p {
+  width: 90%;
+} */
+
+#contact .form {
+  width: 500px;
+  position: relative;
+  /* background-color: var(--accent); */
+}
+
+#contact .form label {
+  margin-bottom: 9px;
+}
+
+#contact .form input,
+textarea {
+  font-family: "Readex Pro", sans-serif;
+}
+
+#contact .form [type="submit"] {
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: var(--accent);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  margin-top: 16px;
+}
+
+#contact .form [type="submit"]:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.form div {
+  margin-bottom: 8px;
+}
+
+.form input[type="text"],
+[type="email"] {
+  height: 42px;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.form [type="email"] {
+  width: 100%;
+}
+
+.form_fullname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: #000; */
+}
+
+.form_fullname span,
+.form_emailadd,
+.form_message {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_fullname span {
+  width: 100%;
+}
+
+.form_fname {
+  margin-right: 32px;
+}
+
+/* Textarea */
+.form_message textarea {
+  resize: none;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+/* Footer */
+footer {
+  padding: 36px;
+  color: #2e2e2e;
+  text-align: center;
+  background-color: var(--primary);
+}
+
+footer div {
+  margin: 32px 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-media a {
+  text-decoration: 4px underline;
+  color: #2e2e2e;
+  transition: 0.6s;
+  text-decoration-color: transparent;
+}
+
+.social-media a:hover {
+  text-decoration: 4px underline;
+  color: var(--white);
+}

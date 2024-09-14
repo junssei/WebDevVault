@@ -44,6 +44,10 @@ nav h1 {
   margin-left: 15px;
 }
 
+nav img {
+  display: none;
+}
+
 nav ul {
   display: flex;
 }
@@ -63,6 +67,20 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline 4px;
   color: var(--secondary);
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+
+  nav img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 15px;
+  }
 }
 
 /* Hero Section */
@@ -105,6 +123,21 @@ nav ul li a:hover {
 #hero div a:hover {
   color: var(--black);
   background-color: var(--neutral);
+}
+
+@media screen and (max-width: 600px) {
+  #hero div span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero div span a {
+    margin-bottom: 16px;
+  }
+
+  #hero div p {
+    font-size: 40px;
+  }
 }
 
 /* Features and Pricing */
@@ -208,6 +241,7 @@ nav ul li a:hover {
 .prctier {
   position: relative;
   padding: 32px 64px;
+  transition: 0.5s ease;
   /* height: 80vh; */
 }
 
@@ -247,6 +281,7 @@ nav ul li a:hover {
   color: var(--white);
   scale: 1.05;
   z-index: 1;
+  transition: 0.5s ease;
 }
 
 .recommended:hover {
@@ -262,6 +297,16 @@ nav ul li a:hover {
 .recommended a:hover {
   background-color: var(--white);
   color: var(--black);
+}
+
+@media screen and (max-width: 600px) {
+  .prctier ul {
+    display: none;
+  }
+  .recommended {
+    border-radius: 0px;
+    scale: 1;
+  }
 }
 
 /* Testimonial */
@@ -371,6 +416,12 @@ nav ul li a:hover {
 #calltoaction a:hover {
   background-color: var(--white);
   color: var(--black);
+}
+
+@media screen and (max-width: 600px) {
+  #calltoaction p {
+    font-size: 32px;
+  }
 }
 
 /* Contact */

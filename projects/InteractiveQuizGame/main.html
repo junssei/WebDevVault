@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="menu_screen">
+      <div id="menu_cntnr">
+        <h1>Quiz Game</h1>
+        <form action="#" onsubmit="myPlay()">
+          <input
+            id="getUser"
+            type="text"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+          <input type="submit" id="play" value="Play" />
+        </form>
+      </div>
+    </div>
+    <main id="game_screen">
+      <header>
+        <div id="logo">
+          <p>Quiz Game</p>
+        </div>
+        <div id="user">
+          <p id="username"></p>
+          <p>|</p>
+          <p>Score: <span> 0 </span></p>
+        </div>
+      </header>
+      <section id="quiz">
+        <section id="question">
+          <!--  -->
+        </section>
+        <section id="choices">
+          <!--  -->
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
+<script src="main.js"></script>

@@ -28,17 +28,28 @@
           <p>Quiz Game</p>
         </div>
         <div id="user">
-          <p id="username"></p>
+          <a href="main.html"> EXIT </a>
           <p>|</p>
-          <p>Score: <span> 0 </span></p>
+          <p id="username"></p>
         </div>
       </header>
       <section id="quiz">
-        <section id="question">
-          <!--  -->
-        </section>
-        <section id="choices">
-          <!--  -->
+        <section id="quiz_box">
+          <section id="question">
+            <p id="qtext"></p>
+          </section>
+          <section id="choices">
+            <div id="choices_box">
+              <!-- <p>A) var myVariable</p>
+              <p>B) variable myVariable;</p>
+              <p>C) myVariable := 0;</p>
+              <p>D) declare myVariable;</p> -->
+            </div>
+          </section>
+          <div id="questionBottom">
+            <p><span id="qnum"> 1 </span> of 10 questions</p>
+            <button id="nextQuestion"> Next </button>
+          </div>
         </section>
       </section>
     </main>

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 
 :root {
-  --firstcolor: #7c93c3;
-  --secondcolor: #55679c;
-  --thirdcolor: #1e2a5e;
-  --fourthcolor: #e1d7b7;
+  --primary: #3e3232;
+  --secondary: #503c3c;
+  --accent: #7e6363;
+  --neutral: #a87c7c;
   --whitecolor: #fff;
   --blackcolor: #000;
 }
@@ -19,9 +19,13 @@
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
   color: var(--whitecolor);
-  background: var(--thirdcolor);
+  background-color: var(--primary);
+  /* background: url(images/1.gif); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Menu */
@@ -32,7 +36,6 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* background-color: var(--firstcolor); */
 }
 
 #menu_screen h1 {
@@ -45,10 +48,11 @@ body {
   display: flex;
   margin-top: 64px;
   flex-direction: row;
+  justify-content: center;
 }
 
 #menu_screen form input,
-button {
+#menu_screen form button {
   height: 64px;
   outline: none;
   font-size: 18px;
@@ -58,29 +62,33 @@ button {
 }
 
 #menu_screen form #play {
-  width: 100%;
-  background-color: var(--fourthcolor);
+  width: 100px;
+  color: var(--whitecolor);
+  background-color: var(--accent);
 }
 
 #menu_screen form #play:hover {
-  background-color: var(--blackcolor);
+  background-color: var(--secondary);
   color: var(--whitecolor);
 }
 
 /* Game */
 #game_screen {
+  width: 100%;
+  height: 100%;
   display: none;
+  position: relative;
 }
 
 header {
-  height: 5vh;
   /* width: 100%; */
+  height: 5vh;
   display: flex;
   padding: 4px 21px;
   position: relative;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--firstcolor);
+  background-color: var(--neutral);
 }
 
 header div {
@@ -100,11 +108,115 @@ header #logo p {
 
 header #user {
   display: flex;
+  align-items: center;
   justify-content: end;
 }
 
 header #user p {
   font-weight: 500;
   letter-spacing: 2px;
-  margin-right: 16px;
+  margin-left: 16px;
+}
+
+header #user a {
+  font-weight: 500;
+  color: white;
+  background-color: #f44336;
+  text-decoration: none;
+  padding: 6px 24px;
+  border-radius: 12px;
+}
+
+header #user a:hover {
+  background-color: var(--whitecolor);
+  color: var(--blackcolor);
+}
+
+/* Quiz */
+#quiz {
+  /* width: 100%; */
+  height: 94vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#quiz_box {
+  padding: 48px;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 600px;
+  max-height: 600px;
+  user-select: none;
+  position: relative;
+  border-radius: 16px;
+  background-color: var(--neutral);
+  /* box-shadow: 0 0 10px var(--firstcolor), 0 0 20px var(--firstcolor),
+    0 0 40px var(--firstcolor), 0 0 80px var(--firstcolor); */
+}
+#question {
+  margin-bottom: 64px;
+}
+
+#qcount {
+  margin-bottom: 32px;
+}
+
+#question p {
+  font-size: 24px;
+  text-align: justify;
+}
+
+#questionBottom{
+  display: flex;
+  margin-top: 42px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#questionBottom button{
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+#questionBottom button:hover{
+  background-color: var(--secondary);
+}
+
+#choices_box {
+  display: grid;
+  row-gap: 16px;
+  column-gap: 16px;
+  grid-template-columns: auto auto;
+}
+
+#choices_box p {
+  padding: 24px;
+  cursor: pointer;
+  border-radius: 70px;
+  color: var(--blackcolor);
+  background-color: var(--whitecolor);
+}
+
+#choices_box p:hover {
+  background-color: var(--secondary);
+}
+
+#choices_box .option.correct{
+  background-color: var(--accent);
+  color: #00a63d;
+}
+
+#choices_box .option.incorrect{
+  background-color: var(--accent);
+  color: #a60000;
+}
+
+#choices_box .option.disabled{
+  pointer-events:none;
 }

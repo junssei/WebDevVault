@@ -23,9 +23,9 @@ body {
   position: relative;
   color: var(--whitecolor);
   background-color: var(--primary);
-  /* background: url(images/1.gif); */
-  background-repeat: no-repeat;
+  background: url(images/1.gif);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Menu */

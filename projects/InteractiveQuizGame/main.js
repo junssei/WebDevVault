@@ -1,6 +1,7 @@
 let menu = document.getElementById("menu_screen");
 let game = document.getElementById("game_screen");
 
+//I add a function for a button to start
 function myPlay() {
   menu.style.display = "none";
   game.style.display = "block";
@@ -8,6 +9,7 @@ function myPlay() {
   document.getElementById("username").innerHTML = username;
 }
 
+// Object
 let questions = [
   {
     qnum: 1,

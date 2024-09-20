@@ -2,8 +2,8 @@ let menu = document.getElementById("menu_screen");
 let game = document.getElementById("game_screen");
 
 function myPlay() {
-  game.style.display = "block";
   menu.style.display = "none";
+  game.style.display = "block";
   var username = document.getElementById("getUser").value;
   document.getElementById("username").innerHTML = username;
 }
@@ -104,8 +104,11 @@ let questions = [
 ];
 
 let qcount = 0;
+let score = 0;
+document.querySelector(".count_items").innerHTML = questions.length;
 showQuestion(qcount);
 
+// Next Button
 const nextBtn = document.getElementById('nextQuestion');
 nextBtn.onclick = () => {
   if(qcount < questions.length - 1){
@@ -113,12 +116,13 @@ nextBtn.onclick = () => {
     showQuestion(qcount);
   } else {
     console.log('Question Completed');
-
+    results(score);
   }
 }
 
 const optionList = document.querySelector('#choices_box');
 
+// Display the questions and choices
 function showQuestion(index) {
   const numQuestion = document.querySelector('#qnum').innerHTML = index+1;
   const questionText = document.querySelector('#qtext');
@@ -141,6 +145,7 @@ function showQuestion(index) {
   }
 }
 
+// When option is selection, shows corrent and incorrrect
 function optionSelected(answer){
   let userAnswer = answer.textContent;
   let correctAnswer = questions[qcount].answer;
@@ -148,6 +153,7 @@ function optionSelected(answer){
 
   if(userAnswer == correctAnswer){
     answer.classList.add('correct');
+    score++;
   } else {
     answer.classList.add('incorrect');
     for(let i = 0; i < allOptions; i++){
@@ -157,8 +163,27 @@ function optionSelected(answer){
     }
   }
 
+  // user select one option then its disabled all the options each
   for(let i = 0; i < allOptions; i++){
     optionList.children[i].classList.add('disabled');
   }
+}
 
+// Results
+function results(result){
+  document.querySelector('.count_score').innerHTML = result;
+  document.querySelector('#quiz_box').style.display = "none";
+  document.querySelector('#quiz_results').style.display = "block";
+
+  if(result == 10){
+    document.querySelector('.result_message').innerHTML = "Perfect";
+  } else if (result >= 7) {
+    document.querySelector('.result_message').innerHTML = "Good";
+  } else if (result >= 5) {
+    document.querySelector('.result_message').innerHTML = "Not Bad";
+  } else if (result >= 3){
+    document.querySelector('.result_message').innerHTML = "Bad";
+  } else if (result >= 0){
+    document.querySelector('.result_message').innerHTML = "Keep studying! Don't Give up!";
+  }
 }

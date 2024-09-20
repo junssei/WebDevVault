@@ -80,6 +80,7 @@ body {
   position: relative;
 }
 
+/* Header */
 header {
   /* width: 100%; */
   height: 5vh;
@@ -155,6 +156,8 @@ header #user a:hover {
   /* box-shadow: 0 0 10px var(--firstcolor), 0 0 20px var(--firstcolor),
     0 0 40px var(--firstcolor), 0 0 80px var(--firstcolor); */
 }
+
+/* Question */
 #question {
   margin-bottom: 64px;
 }
@@ -188,6 +191,7 @@ header #user a:hover {
   background-color: var(--secondary);
 }
 
+/* Choices */
 #choices_box {
   display: grid;
   row-gap: 16px;
@@ -219,4 +223,11 @@ header #user a:hover {
 
 #choices_box .option.disabled{
   pointer-events:none;
+}
+
+/* Results */
+#quiz_results{
+  display: none;
+  font-size: 30px;
+  text-align: center;
 }

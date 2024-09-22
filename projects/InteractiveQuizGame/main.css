@@ -41,18 +41,19 @@ body {
 #menu_screen h1 {
   font-size: 64px;
   user-select: none;
+  margin-bottom: 64px;
 }
 
-#menu_screen form {
+/* #menu_screen form {
   width: 100%;
   display: flex;
   margin-top: 64px;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
-#menu_screen form input,
-#menu_screen form button {
+#menu_screen input,
+#menu_screen button {
   height: 64px;
   outline: none;
   font-size: 18px;
@@ -61,13 +62,13 @@ body {
   box-sizing: border-box;
 }
 
-#menu_screen form #play {
+#menu_screen #play {
   width: 100px;
   color: var(--whitecolor);
   background-color: var(--accent);
 }
 
-#menu_screen form #play:hover {
+#menu_screen #play:hover {
   background-color: var(--secondary);
   color: var(--whitecolor);
 }

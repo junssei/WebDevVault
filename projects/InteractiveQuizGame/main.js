@@ -6,7 +6,12 @@ function myPlay() {
   menu.style.display = "none";
   game.style.display = "block";
   var username = document.getElementById("getUser").value;
-  document.getElementById("username").innerHTML = username;
+  
+  if(username == ""){
+    document.getElementById("username").innerHTML = "UserDefault";
+  } else {
+    document.getElementById("username").innerHTML = username;
+  }
 }
 
 // Object

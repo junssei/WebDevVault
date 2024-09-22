@@ -10,16 +10,14 @@
     <div id="menu_screen">
       <div id="menu_cntnr">
         <h1>Quiz Game</h1>
-        <form action="#" onsubmit="myPlay()">
+        <!-- <form action="#" onsubmit=""> -->
           <input
             id="getUser"
             type="text"
             placeholder="Enter your name"
-            required
-            autofocus
           />
-          <input type="submit" id="play" value="Play" />
-        </form>
+          <button onclick="myPlay()" id="play"> Play </button>
+        <!-- </form> -->
       </div>
     </div>
     <main id="game_screen">
@@ -28,7 +26,7 @@
           <p>Quiz Game</p>
         </div>
         <div id="user">
-          <a href="main.html?"> EXIT </a>
+          <a href="main.html"> EXIT </a>
           <p>|</p>
           <p id="username"></p>
         </div>

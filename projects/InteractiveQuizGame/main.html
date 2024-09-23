@@ -2,21 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div id="menu_screen">
       <div id="menu_cntnr">
         <h1>Quiz Game</h1>
         <!-- <form action="#" onsubmit=""> -->
-          <input
-            id="getUser"
-            type="text"
-            placeholder="Enter your name"
-          />
-          <button onclick="myPlay()" id="play"> Play </button>
+        <input id="getUser" type="text" placeholder="Enter your name" />
+        <button onclick="myPlay()" id="play">Play</button>
         <!-- </form> -->
       </div>
     </div>
@@ -46,15 +43,17 @@
           </section>
           <div id="questionBottom">
             <p><span id="qnum"> 1 </span> of 10 questions</p>
-            <button id="nextQuestion"> Next </button>
+            <button id="nextQuestion">Next</button>
           </div>
         </section>
         <section id="quiz_results">
-          <p> Score: <span class="count_score"> 0 </span> / <span class="count_items"></span></p>
+          <p>
+            Score: <span class="count_score"> 0 </span> /
+            <span class="count_items"></span>
+          </p>
           <p class="result_message"></p>
         </section>
       </section>
     </main>
   </body>
 </html>
-<script src="main.js"></script>

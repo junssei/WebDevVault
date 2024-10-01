@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Quiz Game</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" href="main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -17,6 +16,7 @@
         <!-- </form> -->
       </div>
     </div>
+
     <main id="game_screen">
       <header>
         <div id="logo">
@@ -43,13 +43,13 @@
           </section>
           <div id="questionBottom">
             <p><span id="qnum"> 1 </span> of 10 questions</p>
-            <button id="nextQuestion">Next</button>
+            <button id="nextQuestion"> Next </button>
           </div>
         </section>
         <section id="quiz_results">
           <p>
             Score: <span class="count_score"> 0 </span> /
-            <span class="count_items"></span>
+            <span class="count_items"> 0 </span>
           </p>
           <p class="result_message"></p>
         </section>
@@ -57,3 +57,4 @@
     </main>
   </body>
 </html>
+<script src="main.js"></script>

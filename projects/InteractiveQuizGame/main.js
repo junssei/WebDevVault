@@ -1,13 +1,13 @@
 let menu = document.getElementById("menu_screen");
 let game = document.getElementById("game_screen");
 
-//I add a function for a button to start
+//function for a button to start the game
 function myPlay() {
   menu.style.display = "none";
   game.style.display = "block";
   var username = document.getElementById("getUser").value;
-  
-  if(username == ""){
+
+  if (username == "") {
     document.getElementById("username").innerHTML = "UserDefault";
   } else {
     document.getElementById("username").innerHTML = username;
@@ -116,26 +116,28 @@ document.querySelector(".count_items").innerHTML = questions.length;
 showQuestion(qcount);
 
 // Next Button
-const nextBtn = document.getElementById('nextQuestion');
+const nextBtn = document.getElementById("nextQuestion");
 nextBtn.onclick = () => {
-  if(qcount < questions.length - 1){
+  if (qcount < questions.length - 1) {
     qcount++;
     showQuestion(qcount);
   } else {
-    console.log('Question Completed');
+    console.log("Question Completed");
     results(score);
   }
-}
+};
 
-const optionList = document.querySelector('#choices_box');
+const optionList = document.querySelector("#choices_box");
 
 // Display the questions and choices
 function showQuestion(index) {
-  const numQuestion = document.querySelector('#qnum').innerHTML = index+1;
-  const questionText = document.querySelector('#qtext');
-  
+  const numQuestion = (document.querySelector("#qnum").innerHTML = index + 1);
+  const questionText = document.querySelector("#qtext");
+
   questionText.textContent = `${questions[index].qnum}. ${questions[index].question}`;
-  
+
+  let choicesText = document.querySelector("#choices_box");
+
   let optionTag = `
               <p class="option">${questions[index].choices[0]}</p>
               <p class="option">${questions[index].choices[1]}</p>
@@ -143,54 +145,54 @@ function showQuestion(index) {
               <p class="option">${questions[index].choices[3]}</p>
               `;
 
-  let choicesText = document.querySelector('#choices_box')
   choicesText.innerHTML = optionTag;
-  
-  const option = document.querySelectorAll('.option');
-  for(let i=0; i < option.length; i++){
-    option[i].setAttribute('onclick', 'optionSelected(this)');
+
+  const option = document.querySelectorAll(".option");
+  for (let i = 0; i < option.length; i++) {
+    option[i].setAttribute("onclick", "optionSelected(this)");
   }
 }
 
 // When option is selection, shows corrent and incorrrect
-function optionSelected(answer){
+function optionSelected(answer) {
   let userAnswer = answer.textContent;
   let correctAnswer = questions[qcount].answer;
   let allOptions = choices_box.children.length;
 
-  if(userAnswer == correctAnswer){
-    answer.classList.add('correct');
+  if (userAnswer == correctAnswer) {
+    answer.classList.add("correct");
     score++;
   } else {
-    answer.classList.add('incorrect');
-    for(let i = 0; i < allOptions; i++){
-      if(optionList.children[i].textContent == correctAnswer){
-        optionList.children[i].setAttribute('class', 'option correct');
+    answer.classList.add("incorrect");
+    for (let i = 0; i < allOptions; i++) {
+      if (optionList.children[i].textContent == correctAnswer) {
+        optionList.children[i].setAttribute("class", "option correct");
       }
     }
   }
 
   // user select one option then its disabled all the options each
-  for(let i = 0; i < allOptions; i++){
-    optionList.children[i].classList.add('disabled');
+  for (let i = 0; i < allOptions; i++) {
+    optionList.children[i].classList.add("disabled");
   }
 }
 
 // Results
-function results(result){
-  document.querySelector('.count_score').innerHTML = result;
-  document.querySelector('#quiz_box').style.display = "none";
-  document.querySelector('#quiz_results').style.display = "block";
+function results(result) {
+  document.querySelector(".count_score").innerHTML = result;
+  document.querySelector("#quiz_box").style.display = "none";
+  document.querySelector("#quiz_results").style.display = "block";
 
-  if(result == 10){
-    document.querySelector('.result_message').innerHTML = "Perfect";
+  if (result == 10) {
+    document.querySelector(".result_message").innerHTML = "Perfect";
   } else if (result >= 7) {
-    document.querySelector('.result_message').innerHTML = "Good";
+    document.querySelector(".result_message").innerHTML = "Good";
   } else if (result >= 5) {
-    document.querySelector('.result_message').innerHTML = "Not Bad";
-  } else if (result >= 3){
-    document.querySelector('.result_message').innerHTML = "Bad";
-  } else if (result >= 0){
-    document.querySelector('.result_message').innerHTML = "Keep studying! Don't Give up!";
+    document.querySelector(".result_message").innerHTML = "Not Bad";
+  } else if (result >= 3) {
+    document.querySelector(".result_message").innerHTML = "Bad";
+  } else if (result >= 0) {
+    document.querySelector(".result_message").innerHTML =
+      "Keep studying! Don't Give up!";
   }
 }

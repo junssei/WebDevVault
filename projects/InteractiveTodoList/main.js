@@ -17,8 +17,8 @@ let taskArray = [
   },
 ];
 
-document.onload = displayList();
 let count = taskArray.length;
+document.onload = displayList();
 
 document.getElementById("addBtn").addEventListener("click", function () {
   let inputTxt = document.getElementById("taskInput").value;
@@ -49,35 +49,25 @@ function displayList() {
       taskArray[i].text +
       '<button class="deletebtn" onclick="deleteTask(this)"> Delete </button></li>';
     list.innerHTML = subText;
-
-    // let taskText = document.createElement("li");
-    // taskText.textContent = taskArray[i].text;
-    // list.appendChild(taskText);
-    // console.log(taskText);
-
-    //   console.log(subText);
     console.log(taskArray[i]);
   }
 }
 
-function completeList() {
-  if (taskArray[i].completed) {
-  } else {
-  }
-}
-
-var list = document.getElementById("taskList");
-list.addEventListener(
-  "click",
-  function (tk) {
-    if (tk.target.tagName === "LI") {
-      tk.target.classList.toggle("completed");
+let task = document.getElementsByClassName("task");
+for (let i = 0; i < task.length; i++) {
+  task[i].addEventListener("click", function () {
+    if (taskArray[i].completed) {
+      taskArray[i].completed = false;
+      console.log(taskArray[i].text + ": " + taskArray[i].completed);
+      task[i].classList.remove("completed");
+    } else {
+      taskArray[i].completed = true;
+      console.log(taskArray[i].text + ": " + taskArray[i].completed);
+      task[i].classList.add("completed");
     }
-  },
-  false
-);
+  });
+}
 
 function deleteTask(tsk) {
   tsk.parentElement.remove();
-  // displayList();
 }

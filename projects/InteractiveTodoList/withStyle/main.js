@@ -20,9 +20,9 @@ let taskArray = [
 document.onload = displayList();
 let count = taskArray.length;
 
-document.getElementById("addBtn").addEventListener("click", function () {
+document.getElementById("addBtn").addEventListener("click", function(){
   let inputTxt = document.getElementById("taskInput").value;
-
+  
   if (inputTxt != "") {
     taskArray[count] = {
       id: count,
@@ -41,28 +41,28 @@ function displayList() {
   let list = document.getElementById("taskList");
   let subText = "";
 
-  // text.innerHTML += '<li class="task">' + taskArray[count].text + '<button class="deletebtn" onclick="deleteTask(this)"> Delete </button></li>';
+  // text.innerHTML += '<li class="task">' + taskArray[count].text + '<button class="deletebtn" onclick="deleteTask(this)"> Delete </button></li>'; 
 
   for (let i = 0; i < taskArray.length; i++) {
-    subText +=
-      '<li class="task">' +
-      taskArray[i].text +
-      '<button class="deletebtn" onclick="deleteTask(this)"> Delete </button></li>';
+    subText += '<li class="task">' + taskArray[i].text + '<button class="deletebtn" onclick="deleteTask(this)"> Delete </button></li>';
     list.innerHTML = subText;
 
-    // let taskText = document.createElement("li");
+    // let taskText = document.createElement('li');
     // taskText.textContent = taskArray[i].text;
-    // list.appendChild(taskText);
     // console.log(taskText);
 
-    //   console.log(subText);
+
+
+    console.log(subText);
     console.log(taskArray[i]);
-  }
+  } 
 }
 
-function completeList() {
-  if (taskArray[i].completed) {
-  } else {
+function completeList(){
+  if(taskArray[i].completed){
+
+  } else{
+
   }
 }
 
@@ -76,6 +76,8 @@ list.addEventListener(
   },
   false
 );
+
+
 
 function deleteTask(tsk) {
   tsk.parentElement.remove();

@@ -6,26 +6,25 @@ let taskArray = [
 ];
 
 let count = taskArray.length;
-
 let list = document.getElementById("taskList");
 let subText = "";
-for (let i = 0; i < taskArray.length; i++) {
+for (let  i = 0; i < taskArray.length; i++) {
   subText += '<li class="task">' + taskArray[i].text + '<button class="deletebtn"> Delete </button></li>';
   list.innerHTML = subText;
   console.log(taskArray[i]);
 }
 
-completeList();
 deleteList();
+completeList();
 
 //Add Task Button Event Listener
 document.getElementById("addBtn").addEventListener("click", function () {
   let inputTxt = document.getElementById("taskInput").value;
-
+  
   if (inputTxt != "") {
-    taskArray[count] = { id: count, text: inputTxt, completed: false };
-    displayList();
+    taskArray[count] = { id: count, text: inputTxt, completed: false};
     console.log(taskArray[count]);
+    displayList();
     count++;
   } else {
     alert("Need to input a task!");

@@ -30,7 +30,7 @@ body {
   display: flex;
   background-color: #fff;
   margin-bottom: 30px;
-  border-radius: 11px;
+  border-radius: 10px;
   height: 80px;
   padding: 0px 16px;
 }
@@ -39,6 +39,7 @@ body {
   width: 100%;
   font-size: 21px;
   text-align: right;
+  user-select: none;
   align-self: center;
 }
 
@@ -60,4 +61,13 @@ body {
   color: #fff;
   cursor: pointer;
   background-color: #303030;
+}
+
+.clear {
+  color: #fff;
+  background-color: #da3e00;
+}
+
+.clear:hover {
+  background-color: #aa3000;
 }
